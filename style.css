@@ -1,0 +1,220 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: flex;
+}
+@font-face {
+    font-family: flex;
+    src: url(fonts/ibm-plex-sans-v14-latin-regular.woff2);
+}
+h1{
+    font-size: 55px;
+}
+.main-container{
+    background-image: url(img/bg1.jpg);
+    background-size: cover;
+    height: 100vh;
+    overflow: scroll;
+}
+.winner-container, .cards-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    object-fit: cover;
+    margin-top: 25px;
+}
+.margin-left{
+    margin-left: 350px;
+}
+
+.winner-image{
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+.winner-image img{
+    width: 100%;
+}
+.winner-card{
+    box-shadow: 0 0 40px gold;
+    background-color: gold;
+}
+.card{
+    background-color: rgba(246, 209, 209, 0.5);
+    border-radius: 10px;
+}
+.winner-card, .card{
+    width: 500px;
+    height: 50px;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 15px;
+
+}
+.hide{
+    display: none;
+}
+.sidebar-container{
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateX(-500px);
+    transition: all 225ms ease-in-out;
+
+}
+.show-sidebar{
+    transform: translateX(0);
+}
+
+.sidebar-container img{
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    padding: 10px;
+    background-color: rgba(246, 209, 209, 0.5);
+    border-radius: 10px;
+}
+.sidebar-container img:hover, .card:hover{
+    background-color: rgba(246, 209, 209, 1);
+}
+.click-sort{
+    position: absolute;
+    left: 175px;
+    top: 320px;
+    font-size: 28px;
+    cursor: pointer;
+}
+.underline-a{
+    animation: 500ms animationunder ease-in-out;
+}
+@keyframes animationunder{
+    from{
+        position: absolute;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    to{
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+   
+}
+@media (max-width: 1100px){
+    .click-sort{
+        left: 100px;
+        top: 250px;
+
+    }
+    .sidebar-container{
+        left: 50px;
+    }
+}
+@media (max-width: 900px){
+    .sidebar-container{
+        width: 200px;
+    }
+    .winner-card, .card{
+        width: 300px;
+        font-size: 18px;
+    }
+    h2{
+        font-size: 18px;
+
+    }
+    h1{
+        font-size: 45px;
+    }
+    .winner-image{
+        width: 300px;
+        height: 150px;
+    }
+    .margin-left{
+        margin-left: 250px;
+    }
+    .click-sort{
+        left: 50px;
+    }
+}
+@media (max-width: 600px){
+
+    .winner-container, .cards-container{
+        justify-content: center;
+    }
+    .margin-left{
+        margin-left: 80px;
+    }
+    .winner-card, .card{
+        width: 220px;
+        font-size: 14px;
+    }
+    .winner-card{
+        text-align: center;
+    }
+    h2{
+        font-size: 14px;
+    }
+    h1{
+        margin-top: 50px;
+        font-size: 35px;
+    }
+    .winner-image{
+        width: 220px;
+        height: 110px;
+    }
+    .sidebar-container{
+        width: 100px;
+        top: 25px;
+        left: 15px;
+        overflow: scroll;
+
+    }
+    .sidebar-container img{
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+        margin: 10px;
+    }
+    .click-sort{
+        top: 15px;
+
+        font-size: 14px;
+    }
+}
+@media (max-width: 350px){
+    .winner-card, .card{
+        width: 150px;
+        font-size: 12px;
+    } 
+    .margin-left{
+        margin-left: 0;
+    }
+    .winner-image{
+        width: 150px;
+        height: 80px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .margin-left{
+        margin-left: 30px;
+    }
+    .sidebar-container{
+        left: 0;
+    }
+    
+}

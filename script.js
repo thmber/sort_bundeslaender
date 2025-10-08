@@ -3,12 +3,22 @@ function render(parameter, beginning){
     cards.innerHTML = '';
     for (let i = beginning; i < bundeslaender.length; i++) {
         let land = bundeslaender[i];
-        cards.innerHTML += `
-            <div class="card" title=${land[parameter]}>
-                ${land['name']}
-            </div>`;
+        if (parameter != 'name'){ 
+            cards.innerHTML += `
+                <div class="card" title=${land[parameter]}>
+                    ${land['name']} - ${land[parameter]}
+                </div>`;
+        }
+        else{
+             cards.innerHTML += `
+                <div class="card" title=${land[parameter]}>
+                    ${land['name']}
+                </div>`;
+        }
     }
+    document.getElementById('headline-box').innerHTML = `Sort by: ${parameter}`;
 }
+
 
 
 function showSidebar(){
@@ -34,7 +44,7 @@ function showWinner(parameter){
         <img src="img/${bundeslaender[0]['imagefile']}.jpg" alt="">
     </div>
     <div class="winner-card" title=${bundeslaender[0][parameter]}>
-        <div class="underline-a">1. Platz: ${bundeslaender[0]['name']}</div>
+        <div class="underline-a">${bundeslaender[0]['name']} ${bundeslaender[0][parameter]}</div>
     </div>`;  
 }
 

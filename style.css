@@ -69,9 +69,22 @@ h1{
     left: 150px;
     width: 300px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     transform: translateX(-500px);
     transition: all 225ms ease-in-out;
+}
+.icon-box{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.headline-box{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 .show-sidebar{
     transform: translateX(0);

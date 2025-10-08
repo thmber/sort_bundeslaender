@@ -10,6 +10,7 @@ body{
 h1{
     font-size: 55px;
 }
+
 .main-container{
     background-image: url(img/bg1.jpg);
     background-size: cover;
@@ -71,7 +72,6 @@ h1{
     flex-wrap: wrap;
     transform: translateX(-500px);
     transition: all 225ms ease-in-out;
-
 }
 .show-sidebar{
     transform: translateX(0);
@@ -94,6 +94,9 @@ h1{
     top: 320px;
     font-size: 28px;
     cursor: pointer;
+}
+.click-sort:hover{
+    color: gray;
 }
 .underline-a{
     animation: 500ms animationunder ease-in-out;

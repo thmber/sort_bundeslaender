@@ -17,6 +17,20 @@ function render(parameter, beginning){
         }
     }
     document.getElementById('headline-box').innerHTML = `Sort by: ${parameter}`;
+    correctLanguage(parameter)
+}
+
+
+function correctLanguage(parameter){
+    if (parameter == 'raucher') {
+        document.getElementById('headline-box').innerHTML = `Sort by: smoker`;
+    }
+    if (parameter == 'area') {
+        document.getElementById('headline-box').innerHTML = `Sort by: area size`;
+    }
+    if (parameter == 'weinkonsum') {
+        document.getElementById('headline-box').innerHTML = `Sort by: wine consumption`;
+    }
 }
 
 
